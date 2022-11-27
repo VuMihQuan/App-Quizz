@@ -1,9 +1,11 @@
 package com.example.myapplication;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.databinding.ItemMenuBinding;
@@ -22,6 +24,12 @@ public class menuAdapter extends RecyclerView.Adapter<menuAdapter.menuViewHolder
         public void bind(com.example.myapplication.itemMenu item) {
             binding.imageView.setImageResource(item.getIdImage());
             binding.textTopic.setText(item.getTopic());
+            binding.getRoot().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Navigation.findNavController(v).navigate(R.id.action_menuFragment_to_selectLevelFragment2);
+                }
+            });
         }
     }
     private final ArrayList<itemMenu> menuArr;

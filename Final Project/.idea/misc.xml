@@ -3,9 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/LaptrinhAndroid/Final Project/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/LaptrinhAndroid/Final Project/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
+        <entry key="..\:/LaptrinhAndroid/Final Project/app/src/main/res/layout/fragment_info_game.xml" value="0.14130434782608695" />
+        <entry key="..\:/LaptrinhAndroid/Final Project/app/src/main/res/layout/fragment_infor_game.xml" value="0.14130434782608695" />
         <entry key="..\:/LaptrinhAndroid/Final Project/app/src/main/res/layout/fragment_menu.xml" value="0.2" />
-        <entry key="..\:/LaptrinhAndroid/Final Project/app/src/main/res/layout/item_menu.xml" value="0.1859375" />
+        <entry key="..\:/LaptrinhAndroid/Final Project/app/src/main/res/layout/fragment_select_level.xml" value="0.2" />
+        <entry key="..\:/LaptrinhAndroid/Final Project/app/src/main/res/layout/item_level.xml" value="0.2" />
+        <entry key="..\:/LaptrinhAndroid/Final Project/app/src/main/res/layout/item_menu.xml" value="0.1" />
+        <entry key="..\:/LaptrinhAndroid/Final Project/app/src/main/res/menu/menu_bottom.xml" value="0.19895833333333332" />
+        <entry key="..\:/LaptrinhAndroid/Final Project/app/src/main/res/menu/toolbar.xml" value="0.2" />
       </map>
     </option>
   </component>

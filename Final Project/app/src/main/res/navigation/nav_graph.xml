@@ -9,5 +9,18 @@
         android:id="@+id/menuFragment"
         android:name="com.example.myapplication.MenuFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_selectLevelFragment2"
+            app:destination="@id/selectLevelFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoGame"
+        android:name="com.example.myapplication.InfoGame"
+        android:label="fragment_info_game"
+        tools:layout="@layout/fragment_info_game" />
+    <fragment
+        android:id="@+id/selectLevelFragment2"
+        android:name="com.example.myapplication.selectLevelFragment"
+        android:label="selectLevelFragment" />
 </navigation>
