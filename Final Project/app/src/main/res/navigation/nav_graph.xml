@@ -22,5 +22,17 @@
     <fragment
         android:id="@+id/selectLevelFragment2"
         android:name="com.example.myapplication.selectLevelFragment"
-        android:label="selectLevelFragment" />
+        android:label="selectLevelFragment" >
+        <action
+            android:id="@+id/action_selectLevelFragment2_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.myapplication.QuestionFragment"
+        android:label="QuestionFragment" >
+        <argument
+            android:name="topic"
+            app:argType="string" />
+    </fragment>
 </navigation>

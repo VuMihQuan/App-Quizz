@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,26 +13,25 @@ import com.example.myapplication.databinding.ItemLevelBinding;
 
 import java.util.ArrayList;
 
-public class levelAdapter extends RecyclerView.Adapter<levelAdapter.levelViewHolder> {
-    public final ArrayList<itemLevel> levelArr;
-    public levelAdapter(ArrayList<itemLevel> levelArr) {
+public class levelAdapter extends RecyclerView.Adapter<levelAdapter.levelViewHolder>{
+     ArrayList<Question> de;
+     ArrayList<Question> tb;
+    ArrayList<Question> kho;
+    public final ArrayList<itemMenu> levelArr;
+    public levelAdapter(ArrayList<itemMenu> levelArr, ArrayList<Question> de, ArrayList<Question> tb, ArrayList<Question> kho) {
         this.levelArr = levelArr;
+        this.de=de;
+        this.tb=tb;
+        this.kho=kho;
     }
 
     public static class levelViewHolder extends RecyclerView.ViewHolder{
         ItemLevelBinding binding;
-
         public levelViewHolder(ItemLevelBinding binding) {
             super(binding.getRoot());
             this.binding=binding;
         }
 
-        public void bind(itemLevel item){
-            binding.textlevel.setText(item.getLevel());
-            binding.imageView.setImageResource(item.getColor());
-
-
-        }
     }
     @NonNull
     @Override
@@ -43,9 +43,27 @@ public class levelAdapter extends RecyclerView.Adapter<levelAdapter.levelViewHol
 
     @Override
     public void onBindViewHolder(@NonNull levelViewHolder holder, int position) {
-        itemLevel itemlevel = levelArr.get(position);
+        itemMenu itemlevel = levelArr.get(position);
         if(itemlevel==null)return;
-        holder.bind(itemlevel);
+        holder.binding.imageView.setImageResource(itemlevel.getIdImage());
+        holder.binding.textlevel.setText(itemlevel.getTopic());
+        holder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int Id = holder.getAdapterPosition();
+                Bundle bundle = new Bundle();
+                if(Id==0){
+                    bundle.putParcelableArrayList("data",de);
+                }
+                if(Id==1){
+                    bundle.putSerializable("data",tb);
+                }
+                if(Id==2){
+                    bundle.putSerializable("data",kho);
+                }
+                Navigation.findNavController(v).navigate(R.id.action_selectLevelFragment2_to_questionFragment, bundle);
+            }
+        });
     }
 
     @Override
