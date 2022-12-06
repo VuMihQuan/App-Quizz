@@ -36,6 +36,8 @@ public class QuestionFragment extends Fragment implements OnCllickItem {
             @Override
             public void onClickitem(ArrayList<Question> data, int id) {
                     binding.textView.setText(data.get(id).getQuestionText());
+                    int current = binding.progressBar.getProgress();
+                    binding.progressBar.setProgress(current+1);
                 }
         }));
         return binding.getRoot();

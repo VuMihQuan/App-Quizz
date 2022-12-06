@@ -21,7 +21,6 @@ public class endGameFragment extends Fragment {
                              Bundle savedInstanceState) {
         FragmentEndGameBinding binding = FragmentEndGameBinding.inflate(inflater,container,false);
         int n = getArguments().getInt("n");
-        String nn = String.valueOf(n);
         binding.textView3.setText(n+"/5");
         binding.button3.setOnClickListener(new View.OnClickListener() {
             @Override

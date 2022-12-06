@@ -57,12 +57,12 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Questi
         holder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(boolToInt(data.get(questionIndex).getQuestionAnswer())!=id){
+                    n++;
+                }
                 if(questionIndex < 4){
-                    listener.onClickitem(data,questionIndex);
                     questionIndex+=1;
-                    if(boolToInt(data.get(questionIndex).getQuestionAnswer())==id){
-                        n++;
-                    }
+                    listener.onClickitem(data,questionIndex);
                 }else{
                     Bundle bundle = new Bundle();
                     bundle.putInt("n",n);
@@ -71,8 +71,8 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Questi
             }
         });
     }
-    int boolToInt(Boolean b) {
-        return b.compareTo(false);
+    public int boolToInt(boolean b) {
+        return b ? 1 : 0;
     }
     @Override
     public int getItemCount() {

@@ -74,35 +74,35 @@ public class menuAdapter extends RecyclerView.Adapter<menuAdapter.menuViewHolder
 
     ));
     private static final List<Question> lichsukho = new ArrayList<>(Arrays.asList(
-            new Question("đường biên giới trên đất liền của nc ta chủ yếu đi qua miền núi?", true),
-            new Question("đặc điểm nổi bật của địa hình nc ta nhiều nhất là sơn nguyên?", false),
-            new Question("vùng nội thủy của biển nc ta bao gồm các quần đảo ở xa bờ?", false),
-            new Question("dải đồi trung du hẹp nhất nc ta nằm ở rìa đồng bằng ven biển miền trung?", true),
-            new Question("đặc điểm nổi bật của biển đông là nằm trong vùng ôn đới?", false)
+            new Question("Nguyên thủ những nước Anh, Mĩ, Liên Xô tham dự Hội nghị Ianta (2/1945)?", true),
+            new Question("Một trong những nội dung quan trọng của Hội nghị Ianta là: thỏa thuận việc giải giáp phát xít Nhật ở Đông Dương?", false),
+            new Question("Hội nghị Ianta (2/1945) đã họp ở Pháp?", false),
+            new Question("Có 50 quốc gia tham gia sáng lập tổ chức Liên hợp quốc?", true),
+            new Question("Nguyên thủ của các nước tham gia Hội nghị I-an-ta là Aixenhao, Xtalin, Clêmăngxô?", false)
 
     ));
     private static final List<Question> sinhhocde = new ArrayList<>(Arrays.asList(
-            new Question("đường biên giới trên đất liền của nc ta chủ yếu đi qua miền núi?", true),
-            new Question("đặc điểm nổi bật của địa hình nc ta nhiều nhất là sơn nguyên?", false),
-            new Question("vùng nội thủy của biển nc ta bao gồm các quần đảo ở xa bờ?", false),
-            new Question("dải đồi trung du hẹp nhất nc ta nằm ở rìa đồng bằng ven biển miền trung?", true),
-            new Question("đặc điểm nổi bật của biển đông là nằm trong vùng ôn đới?", false)
+            new Question("Chất lỏng hình thành từ hiện tượng ứ giọt là nhựa cây?", true),
+            new Question("Khi tế bào khí khổng no nước thì thành mỏng căng ra, thành dày co lại làm cho khí khổng mở ra?", false),
+            new Question("Khi tế bào khí khổng mất nước thì thành dảy căng ra làm cho thành mỏng co lại, khí khổng đóng lại?", false),
+            new Question("Con đường thoát hơi nước qua khí khổng có đặc điểm là vận tốc lớn, được điều chỉnh bằng việc đóng mở khí khổng?", true),
+            new Question("đĐộ ẩm đất càng cao, sự hấp thụ nước càng ít?", false)
 
     ));
     private static final List<Question> sinhhoctb = new ArrayList<>(Arrays.asList(
-            new Question("đường biên giới trên đất liền của nc ta chủ yếu đi qua miền núi?", true),
-            new Question("đặc điểm nổi bật của địa hình nc ta nhiều nhất là sơn nguyên?", false),
-            new Question("vùng nội thủy của biển nc ta bao gồm các quần đảo ở xa bờ?", false),
-            new Question("dải đồi trung du hẹp nhất nc ta nằm ở rìa đồng bằng ven biển miền trung?", true),
-            new Question("đặc điểm nổi bật của biển đông là nằm trong vùng ôn đới?", false)
+            new Question("Vai trò của phôtpho trong cơ thể thực vật: Là thành phần của protein, axit nucleic?", false),
+            new Question("Khi thiếu kali, cây có những biểu hiện như sinh trưởng còi cọc, lá có màu vàng?", false),
+            new Question("Vai trò của kali trong cơ thể thực vật: Là thành phần của protein và axit nucleic?", false),
+            new Question("dỞ thực vật, nguyên tố dinh dưỡng khoáng thiết yếu Lưu huỳnh là nguyên tố đa lượng?", true),
+            new Question("Vai trò chung của các nguyên tố vi lượng là: Cấu tạo protein?", false)
 
     ));
     private static final List<Question> sinhhockho = new ArrayList<>(Arrays.asList(
-            new Question("đường biên giới trên đất liền của nc ta chủ yếu đi qua miền núi?", true),
-            new Question("đặc điểm nổi bật của địa hình nc ta nhiều nhất là sơn nguyên?", false),
-            new Question("vùng nội thủy của biển nc ta bao gồm các quần đảo ở xa bờ?", false),
-            new Question("dải đồi trung du hẹp nhất nc ta nằm ở rìa đồng bằng ven biển miền trung?", true),
-            new Question("đặc điểm nổi bật của biển đông là nằm trong vùng ôn đới?", false)
+            new Question("Sản phẩm của pha sáng gồm: ATP, NADPH VÀ O2?", true),
+            new Question("Nhóm thực vật C3 được phân bố Ở vùng hàn đới?", false),
+            new Question("Trong lục lạp, pha tối diễn ra ở màng ngoài?", false),
+            new Question("Thực vật C4 được phân bố ở vùng nhiệt đới và cận nhiệt đới?", true),
+            new Question("Những cây thuộc nhóm thực vật CAM là ngô, mía, cỏ lồng vực, cỏ gấu?", false)
 
     ));
     private static final List<Question> toanhocde = new ArrayList<>(Arrays.asList(
@@ -114,19 +114,19 @@ public class menuAdapter extends RecyclerView.Adapter<menuAdapter.menuViewHolder
 
     ));
     private static final List<Question> toanhoctb = new ArrayList<>(Arrays.asList(
-            new Question("đường biên giới trên đất liền của nc ta chủ yếu đi qua miền núi?", true),
-            new Question("đặc điểm nổi bật của địa hình nc ta nhiều nhất là sơn nguyên?", false),
-            new Question("vùng nội thủy của biển nc ta bao gồm các quần đảo ở xa bờ?", false),
-            new Question("dải đồi trung du hẹp nhất nc ta nằm ở rìa đồng bằng ven biển miền trung?", true),
-            new Question("đặc điểm nổi bật của biển đông là nằm trong vùng ôn đới?", false)
+            new Question("123+456=579?", true),
+            new Question("925+123=1047?", false),
+            new Question("838+234=1292?", false),
+            new Question("472+234=760?", true),
+            new Question("437+828=1456?", false)
 
     ));
     private static final List<Question> toanhockho = new ArrayList<>(Arrays.asList(
-            new Question("đường biên giới trên đất liền của nc ta chủ yếu đi qua miền núi?", true),
-            new Question("đặc điểm nổi bật của địa hình nc ta nhiều nhất là sơn nguyên?", false),
-            new Question("vùng nội thủy của biển nc ta bao gồm các quần đảo ở xa bờ?", false),
-            new Question("dải đồi trung du hẹp nhất nc ta nằm ở rìa đồng bằng ven biển miền trung?", true),
-            new Question("đặc điểm nổi bật của biển đông là nằm trong vùng ôn đới?", false)
+            new Question("3561+1614=5175?", true),
+            new Question("8383+828=9823?", false),
+            new Question("839+773=1577?", false),
+            new Question("9222+1345=10567?", true),
+            new Question("7272+128=7822?", false)
 
     ));
 
