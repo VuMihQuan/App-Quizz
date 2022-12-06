@@ -106,11 +106,11 @@ public class menuAdapter extends RecyclerView.Adapter<menuAdapter.menuViewHolder
 
     ));
     private static final List<Question> toanhocde = new ArrayList<>(Arrays.asList(
-            new Question("đường biên giới trên đất liền của nc ta chủ yếu đi qua miền núi?", true),
-            new Question("đặc điểm nổi bật của địa hình nc ta nhiều nhất là sơn nguyên?", false),
-            new Question("vùng nội thủy của biển nc ta bao gồm các quần đảo ở xa bờ?", false),
-            new Question("dải đồi trung du hẹp nhất nc ta nằm ở rìa đồng bằng ven biển miền trung?", true),
-            new Question("đặc điểm nổi bật của biển đông là nằm trong vùng ôn đới?", false)
+            new Question("1+1=2?", true),
+            new Question("2+2=5?", false),
+            new Question("4+5=8?", false),
+            new Question("9+2=11?", true),
+            new Question("3+4=8?", false)
 
     ));
     private static final List<Question> toanhoctb = new ArrayList<>(Arrays.asList(

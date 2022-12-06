@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.media.MediaExtractor;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,15 +18,18 @@ import com.example.myapplication.databinding.ItemMenuBinding;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.BrokenBarrierException;
 
 public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.QuestionViewHolder>{
+    private OnCllickItem listener = null;
+    int n=0;
     private final ArrayList<itemMenu> QuestionArr;
-    public FragmentQuestionBinding bin;
-    public int questionIndex=1;
-    private ArrayList<Question> data;
-    public QuestionAdapter(ArrayList<itemMenu> questionArr,ArrayList<Question> data) {
+    private final ArrayList<Question> data;
+    public int questionIndex = 0;
+    public QuestionAdapter(ArrayList<itemMenu> questionArr,ArrayList<Question> data,OnCllickItem listener) {
         this.QuestionArr = questionArr;
         this.data=data;
+        this.listener=listener;
 
     }
     public static class QuestionViewHolder extends RecyclerView.ViewHolder {
@@ -45,6 +49,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Questi
     }
     @Override
     public void onBindViewHolder(@NonNull QuestionViewHolder holder, int position) {
+        int id = holder.getAdapterPosition();
         itemMenu itemquestion = QuestionArr.get(position);
         if(itemquestion == null) return;
         holder.binding.textTopic.setText(itemquestion.getTopic());
@@ -52,12 +57,23 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Questi
         holder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if(questionIndex < 4){
+                    listener.onClickitem(data,questionIndex);
+                    questionIndex+=1;
+                    if(boolToInt(data.get(questionIndex).getQuestionAnswer())==id){
+                        n++;
+                    }
+                }else{
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("n",n);
+                    Navigation.findNavController(v).navigate(R.id.action_questionFragment_to_endGameFragment,bundle);
+                }
             }
         });
     }
-
-
+    int boolToInt(Boolean b) {
+        return b.compareTo(false);
+    }
     @Override
     public int getItemCount() {
         return QuestionArr.size();

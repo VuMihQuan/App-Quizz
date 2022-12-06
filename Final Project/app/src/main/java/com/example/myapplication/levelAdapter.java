@@ -50,6 +50,7 @@ public class levelAdapter extends RecyclerView.Adapter<levelAdapter.levelViewHol
         holder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 int Id = holder.getAdapterPosition();
                 Bundle bundle = new Bundle();
                 if(Id==0){
