@@ -149,6 +149,7 @@ public class menuAdapter extends RecyclerView.Adapter<menuAdapter.menuViewHolder
             public void onClick(View v) {
                 int Id = holder.getAdapterPosition();
                 Bundle bundle = new Bundle();
+                bundle.putString("topic",itemmenu.getTopic());
                 if(Id ==0){
                     bundle.putParcelableArrayList("de", (ArrayList<? extends Parcelable>) toanhocde);
                     bundle.putParcelableArrayList("tb", (ArrayList<? extends Parcelable>) toanhoctb);

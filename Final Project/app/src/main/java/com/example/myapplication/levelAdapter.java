@@ -14,15 +14,17 @@ import com.example.myapplication.databinding.ItemLevelBinding;
 import java.util.ArrayList;
 
 public class levelAdapter extends RecyclerView.Adapter<levelAdapter.levelViewHolder>{
-     ArrayList<Question> de;
+    String topic;
+    ArrayList<Question> de;
      ArrayList<Question> tb;
     ArrayList<Question> kho;
     public final ArrayList<itemMenu> levelArr;
-    public levelAdapter(ArrayList<itemMenu> levelArr, ArrayList<Question> de, ArrayList<Question> tb, ArrayList<Question> kho) {
+    public levelAdapter(ArrayList<itemMenu> levelArr, ArrayList<Question> de, ArrayList<Question> tb, ArrayList<Question> kho,String topic) {
         this.levelArr = levelArr;
         this.de=de;
         this.tb=tb;
         this.kho=kho;
+        this.topic=topic;
     }
 
     public static class levelViewHolder extends RecyclerView.ViewHolder{
@@ -53,6 +55,8 @@ public class levelAdapter extends RecyclerView.Adapter<levelAdapter.levelViewHol
 
                 int Id = holder.getAdapterPosition();
                 Bundle bundle = new Bundle();
+                bundle.putString("topic",topic);
+                bundle.putString("level",itemlevel.getTopic());
                 if(Id==0){
                     bundle.putParcelableArrayList("data",de);
                 }

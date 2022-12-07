@@ -25,11 +25,15 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Questi
     int n=0;
     private final ArrayList<itemMenu> QuestionArr;
     private final ArrayList<Question> data;
+    String topic;
+    String level;
     public int questionIndex = 0;
-    public QuestionAdapter(ArrayList<itemMenu> questionArr,ArrayList<Question> data,OnCllickItem listener) {
+    public QuestionAdapter(ArrayList<itemMenu> questionArr,ArrayList<Question> data,String topic,String level,OnCllickItem listener) {
         this.QuestionArr = questionArr;
         this.data=data;
         this.listener=listener;
+        this.topic=topic;
+        this.level=level;
 
     }
     public static class QuestionViewHolder extends RecyclerView.ViewHolder {
@@ -65,6 +69,8 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Questi
                     listener.onClickitem(data,questionIndex);
                 }else{
                     Bundle bundle = new Bundle();
+                    bundle.putString("topic",topic);
+                    bundle.putString("level",level);
                     bundle.putInt("n",n);
                     Navigation.findNavController(v).navigate(R.id.action_questionFragment_to_endGameFragment,bundle);
                 }

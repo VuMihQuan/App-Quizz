@@ -18,13 +18,11 @@ import java.util.ArrayList;
 
 public class QuestionFragment extends Fragment implements OnCllickItem {
     private FragmentQuestionBinding binding;
-    private int questionIndex=0;
-    int n =0;
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        String topic = getArguments().getString("topic");
+        String level = getArguments().getString("level");
         ArrayList<Question> data = getArguments().getParcelableArrayList("data");
         // Inflate the layout for this fragment
         binding=FragmentQuestionBinding.inflate(inflater,container,false);
@@ -32,7 +30,7 @@ public class QuestionFragment extends Fragment implements OnCllickItem {
         FragmentQuestionBinding binding= FragmentQuestionBinding.inflate(inflater,container,false);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.textView.setText(data.get(0).getQuestionText());
-        binding.recyclerView.setAdapter(new QuestionAdapter(itemMenu.QuestionArr, data, new OnCllickItem() {
+        binding.recyclerView.setAdapter(new QuestionAdapter(itemMenu.QuestionArr, data,topic,level, new OnCllickItem() {
             @Override
             public void onClickitem(ArrayList<Question> data, int id) {
                     binding.textView.setText(data.get(id).getQuestionText());
